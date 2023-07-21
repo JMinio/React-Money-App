@@ -2,19 +2,20 @@ import { useGlobalState } from "../Context/GlobalState";
 
 function Balance() {
 
-    const {transactions} = useGlobalState() //usamos useContext para usar ese contexto
-    
-    const amounts = transactions.map((t)=> t.amount)
+    const {transactions} = useGlobalState()
+
+    const amounts = transactions.map((t)=> t.amount) //recorrido mostrando un array con los amounts de cada transactions
                                   //funcion recibe acc, item y realiza dicha accion con valor inicial 0
     const total = amounts.reduce((acumulador, item) => (acumulador += item), 0)
 
   return (
     <div>
-        <h1>Balance</h1> 
-        <h2>Transactions</h2>
+        <h1>Tu saldo:</h1> 
+        <h2>
         {
           JSON.stringify(total, null, 2)
         }    
+        </h2>
     </div>
   )
 }
