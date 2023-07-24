@@ -8,11 +8,19 @@ import IncomeExpenses from "./components/IncomeExpenses";
 export default function App() {
   return (
     <GlobalProvider>
-      {/* <Header/> */}
-      <Balance/>
-      <IncomeExpenses/>
-      <TransactionForm/>
-      <TransactionList/>
+      <div className="bg-zinc-900 text-white h-screen flex justify-center items-center">
+        <div className="bg-zinc-800 p-10 rounded-lg flex"> 
+          <div>
+            <Header/>
+            <Balance/>
+            <IncomeExpenses/>
+            <TransactionForm/>
+          </div>
+          <div>
+          <TransactionList/>
+          </div>
+        </div>
+      </div>
     </GlobalProvider>
   )
 }

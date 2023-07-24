@@ -24,18 +24,20 @@ function TransactionForm() {
         <label>Description:
           <input 
           type="text"
+          className="bg-zinc-600 text-white px-3 py-2 rounded-lg block mb-2 w-full"
           onChange={(e) => setDescription(e.target.value)} 
           placeholder="Enter a description" />
         </label>
         <label>Amount:
           <input
           step="0.01"
+          className="bg-zinc-600 text-white px-3 py-2 rounded-lg block mb-2 w-full"
           type="number" 
           placeholder="Enter an amount"
           onChange={(e)=>setAmount(e.target.value)}
           />
         </label>
-        <button>
+        <button className="bg-indigo-600 text-white px-3 py-2 rounded-lg block mb-2 w-full">
           Add Transaction
         </button>
       </form>
